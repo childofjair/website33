@@ -17,7 +17,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 0.5rem;
 }
 .hover-title:not(.space1){
     transition: transform 0.3s ease, color 0.3s ease;
