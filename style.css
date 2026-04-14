@@ -36,7 +36,7 @@ body {
 }
 .hover-title:hover{
     transform: translateY(-10px);
-    color: #0099ff;
+    color: #ffffff77;
 }
 .subtitle{
     font-size: 1.25rem;
@@ -77,7 +77,7 @@ body {
 .hitbox.r2-hit { z-index: 2; }
 .hitbox.r3-hit { z-index: 4; }
 .hitbox.r4-hit { z-index: 3; }
-.record { position: absolute; inset: 0; top: 28px; transform: skew(0deg, 10deg) translateY(0); transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); pointer-events: none; will-change: transform; }
+.record { position: absolute; inset: 0; top: 28px; transform: skew(0deg, 10deg) translateY(0); transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); pointer-events: none; will-change: transform; border-radius: 4px;}
 .r1 { background: transparent; top: 14%; right: 17%; z-index: 1; }
 .r2 { background: transparent; top: 15%; right: 23%; z-index: 1; }
 .r3 { background: transparent; top: 17%; right: 35%; z-index: 3; }
