@@ -3,15 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: Arial, sans-serif;
     background-color: #131313;
     color: #eeeeee;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
 }
 .title{
     display: flex;
@@ -46,6 +48,7 @@ body{
     display: flex;
     gap: 1rem;
     animation: fadeUp 1.2s ease-in-out;
+    margin-top: 2rem;
 }
 .button{
     padding: 0.75rem 1.5rem;
@@ -63,6 +66,30 @@ body{
     transform: scale(1.1);
     
 }
+/*Box w records*/
+.box-container { position: relative; width: 100%; max-width: 300px; aspect-ratio: 1 / 1; margin: 1vw; }
+
+.box { pointer-events: none; position: absolute; width: 100%; left: 50%; transform: translateX(-50%); }
+.front { z-index: 10; }
+.side { z-index: 5; }
+.back { z-index: -3; }
+.hitbox.r1-hit { z-index: 1; }
+.hitbox.r2-hit { z-index: 2; }
+.hitbox.r3-hit { z-index: 4; }
+.hitbox.r4-hit { z-index: 3; }
+.record { position: absolute; inset: 0; top: 28px; transform: skew(0deg, 10deg) translateY(0); transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); pointer-events: none; will-change: transform; }
+.r1 { background: transparent; top: 14%; right: 17%; z-index: 1; }
+.r2 { background: transparent; top: 15%; right: 23%; z-index: 1; }
+.r3 { background: transparent; top: 17%; right: 35%; z-index: 3; }
+.r4 { background: transparent; top: 16%; right: 29%; z-index: 2; }
+.hitbox { position: absolute; width: 150px; height: 150px; background: transparent; }
+.r1-hit { top: 14%; right: 17%; }
+.r2-hit { top: 15%; right: 23%; }
+.r3-hit { top: 17%; right: 35%; }
+.r4-hit { top: 16%; right: 29%; }
+.hitbox:hover .record { transform: skew(0deg, 10deg) translateY(-150px); }
+.hitbox.record { animation: none; }
+@media (max-width: 350px) { .scene { scale: 0.8; } }
 @keyframes fadeDown{
     0%{
         opacity: 0%;
